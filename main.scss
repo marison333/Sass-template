@@ -1,24 +1,29 @@
-// Base
-@use 'base/reset';
+// REMEMBER ALWAYS THE '@USE' BEFORE THE STYLES!!
 
-// Components widgets
+// Base boilerplate code
+@use 'base/reset';
+@use 'base/_typography.scss';
+
+// Components focuses more on widgets.
 @use 'components/buttons';
 @use 'components/images';
 
-// Layout
+// Everything that takes part in the layout of the site.
+// header, navigation, main, aside, footer ect.
 @use 'layout/_footer.scss';
-@use 'layout/_grid.scss';
-@use 'layout/_header.scss';
-@use 'layout/_main.scss';
-@use 'layout/_sidebar.scss';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/sidebar';
 
-// sass-utils
-@use 'sass-utils/_variables.scss';
+// Sass-utils for gathering all Sass tools and helpers used across the project
+@use 'sass-utils/variables/_colors.scss';
 @use 'sass-utils/_mixins.scss';
 @use 'sass-utils/_helpers.scss';
 @use "sass-utils/_functions.scss";
 
-// Pages
-@use 'pages/_home.scss';
+// Page specific styles that are different from the usual layout
+@use 'pages/home';
 
-// Vendors JquaryUI, Bootstrap ect
+// CSS and SCSS from external libraries and frameworks - Normalize, Bootstrap ect.
+// EXAMPLE: "@use 'vendors/bootstrap/main.css';"
